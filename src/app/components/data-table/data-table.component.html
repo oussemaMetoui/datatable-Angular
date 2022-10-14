@@ -1,0 +1,19 @@
+<table class="employee-table">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers; let index = index"
+                (click)="onChangeSort({key:header.key,order:header.order*-1,index:index})">
+                {{header.key}}
+                <fa-icon id="icon{{index}}" [icon]="header.order === 1? faArrowUp : faArrowDown"></fa-icon>
+            </th>
+            <th>Profile image</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let employee of list">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.employee_name }}</td>
+        <td>{{ employee.employee_salary }}</td>
+        <td>{{ employee.employee_age }}</td>
+        <td>{{ employee.profile_image }}</td>
+    </tr>
+</table>

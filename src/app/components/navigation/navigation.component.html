@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="pagination">
+        <ul>
+            <!-- previous page -->
+            <li><a (click)="clickPage(currentPage-1)" [ngClass]="{'is-active': currentPage <= 1 }">
+                    «
+                </a></li>
+            <!-- pages  -->
+            <li *ngFor="let page of listPage" [ngClass]="{'is-active' : page === currentPage}"
+                (click)="clickPage(page)">
+                <a>
+                    {{page}}
+                </a>
+            </li>
+
+            <!-- next page -->
+            <li><a (click)="clickPage(currentPage+1)" [ngClass]="{'disabled': currentPage >= totalPages }">
+                    »
+                </a></li>
+        </ul>
+    </div>
+
+</div>
