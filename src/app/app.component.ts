@@ -9,7 +9,7 @@ import { sort } from './utils/sortUril';
 })
 export class AppComponent implements OnInit {
   headers = [{ key: 'id', order: 1 }, { key: 'employee_name', order: 1 }, { key: 'employee_salary', order: 1 }, { key: 'employee_age', order: 1 }]
-  title = 'datahorizon-app';
+  title = 'datatable-app';
   employees: any;
   pagination: number = 1
   pagesCount: number = 0;
